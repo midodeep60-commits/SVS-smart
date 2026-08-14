@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Request a Quote | Smart Services & Solutions</title>
+
+<style>
+:root{
+  --navy:#203f5f;
+  --gold:#bd9847;
+  --cream:#f4f5f1;
+  --dark:#101a29;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--cream);
+  color:var(--navy);
+}
+
+.page{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* HEADER */
+
+.header{
+  height:100px;
+  background:#fff;
+  border-bottom:2px solid var(--navy);
+  display:flex;
+  align-items:center;
+}
+
+.header-inner{
+  width:min(1100px, calc(100% - 60px));
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  width:190px;
+  height:auto;
+}
+
+.back-link{
+  color:var(--navy);
+  text-decoration:none;
+  font-size:16px;
+  font-weight:600;
+}
+
+.back-link:hover{
+  text-decoration:underline;
+}
+
+/* FORM AREA */
+
+.form-section{
+  width:min(850px, calc(100% - 40px));
+  margin:70px auto;
+  background:#fff;
+  padding:55px 65px;
+  border:1px solid #d8dce0;
+}
+
+.form-title{
+  margin:0 0 12px;
+  font-size:48px;
+  line-height:1.05;
+  font-weight:800;
+}
+
+.form-intro{
+  margin:0 0 40px;
+  font-size:18px;
+  line-height:1.6;
+  max-width:680px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+}
+
+.field.full{
+  grid-column:1 / -1;
+}
+
+label{
+  margin-bottom:9px;
+  font-size:14px;
+  font-weight:700;
+  color:var(--navy);
+}
+
+input,
+textarea,
+select{
+  width:100%;
+  border:1px solid #aeb7c0;
+  background:#fff;
+  padding:15px;
+  font-family:inherit;
+  font-size:16px;
+  color:var(--navy);
+  outline:none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-color:var(--gold);
+}
+
+textarea{
+  min-height:150px;
+  resize:vertical;
+}
+
+.submit-btn{
+  margin-top:30px;
+  border:0;
+  background:var(--gold);
+  color:#fff;
+  padding:18px 35px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.submit-btn:hover{
+  opacity:.9;
+}
+
+.required{
+  color:var(--gold);
+}
+
+/* FOOTER */
+
+.footer{
+  margin-top:auto;
+  background:#fff;
+  border-top:1px solid #d8dce0;
+  padding:30px 40px;
+  text-align:center;
+  font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .header{
+    height:80px;
+  }
+
+  .header-inner{
+    width:calc(100% - 30px);
+  }
+
+  .logo{
+    width:145px;
+  }
+
+  .form-section{
+    width:calc(100% - 28px);
+    margin:35px auto;
+    padding:35px 25px;
+  }
+
+  .form-title{
+    font-size:38px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .field.full{
+    grid-column:auto;
+  }
+
+  .back-link{
+    font-size:14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="header">
+  <div class="header-inner">
+
+    <a href="index.html">
+      <img class="logo" src="assets/logo.png" alt="Smart Services & Solutions">
+    </a>
+
+    <a class="back-link" href="index.html">
+      ← Back to Home
+    </a>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="form-section">
+
+  <h1 class="form-title">Request a Quote</h1>
+
+  <p class="form-intro">
+    Tell us a little about your company and your requirements.
+    Our team will review your request and get back to you.
+  </p>
+
+
+  <form>
+
+    <div class="form-grid">
+
+      <div class="field">
+        <label for="name">
+          Full Name <span class="required">*</span>
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your full name"
+          required
+        >
+      </div>
+
+
+      <div class="field">
+        <label for="phone">
+          Phone Number <span class="required">*</span>
+        </label>
+
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="+20 / +966 ..."
+          required
+        >
+      </div>
+
+
+      <div class="field">
+        <label for="email">
+          Email Address <span class="required">*</span>
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="your@email.com"
+          required
+        >
+      </div>
+
+
+      <div class="field">
+        <label for="city">
+          City <span class="required">*</span>
+        </label>
+
+        <input
+          type="text"
+          id="city"
+          name="city"
+          placeholder="City"
+          required
+        >
+      </div>
+
+
+      <div class="field full">
+        <label for="company">
+          Company / Factory Name <span class="required">*</span>
+        </label>
+
+        <input
+          type="text"
+          id="company"
+          name="company"
+          placeholder="Company or factory name"
+          required
+        >
+      </div>
+
+
+      <div class="field">
+        <label for="country">
+          Country
+        </label>
+
+        <select id="country" name="country">
+
+          <option value="">Select country</option>
+          <option value="Egypt">Egypt</option>
+          <option value="Saudi Arabia">Saudi Arabia</option>
+          <option value="Other">Other</option>
+
+        </select>
+      </div>
+
+
+      <div class="field">
+        <label for="service">
+          Service Required
+        </label>
+
+        <select id="service" name="service">
+
+          <option value="">Select a service</option>
+          <option value="Vibration Analysis & Condition Monitoring">
+            Vibration Analysis & Condition Monitoring
+          </option>
+
+          <option value="Laser Shaft Alignment">
+            Laser Shaft Alignment
+          </option>
+
+          <option value="Field Dynamic Balancing">
+            Field Dynamic Balancing
+          </option>
+
+          <option value="Gearbox & Gear Repair">
+            Gearbox & Gear Repair
+          </option>
+
+          <option value="Kiln & Ball Mill Maintenance">
+            Kiln & Ball Mill Maintenance
+          </option>
+
+          <option value="Mechanical Overhauling & Installation">
+            Mechanical Overhauling & Installation
+          </option>
+
+          <option value="Other">
+            Other
+          </option>
+
+        </select>
+      </div>
+
+
+      <div class="field full">
+        <label for="message">
+          Tell Us About Your Requirement
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Tell us about your equipment, maintenance requirement, or project..."
+        ></textarea>
+      </div>
+
+    </div>
+
+
+    <button class="submit-btn" type="submit">
+      Submit Request ↗
+    </button>
+
+  </form>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+  Smart Services & Solutions (SVS)
+</footer>
+
+</div>
+
+</body>
+</html>
