@@ -499,9 +499,12 @@ img{display:block;max-width:100%} a{color:inherit;text-decoration:none}
     const count = visibleCount();
     const maxIndex = Math.max(0, cards.length - count);
     index = Math.min(Math.max(index, 0), maxIndex);
-const cardStyle = window.getComputedStyle(cards[0]);
-const gap = parseFloat(cardStyle.marginRight) || 18;
-const step = cards[0].getBoundingClientRect().width + 18;    track.style.transform = `translateX(-${index * step}px)`;
+const cardWidth = cards[0].getBoundingClientRect().width;
+const trackStyle = window.getComputedStyle(track);
+const gap = parseFloat(trackStyle.columnGap) || 0;
+const step = cardWidth + gap;
+
+track.style.transform = `translateX(-${index * step}px)`;
     prev.disabled = index === 0;
     next.disabled = index === maxIndex;
   }
