@@ -87,14 +87,96 @@ img{display:block;max-width:100%} a{color:inherit;text-decoration:none}
 .nav-links{display:flex;align-items:center;gap:70px;font-size:18px;white-space:nowrap}
 .nav-links a:first-child{text-decoration:underline;text-underline-offset:5px}
 .quote-btn{min-width:165px;padding:18px 24px;background:var(--gold);color:#fff;font-size:16px;text-align:center;line-height:1.2}
-.hero{display:grid;grid-template-columns:1.1fr .78fr;max-width:var(--max);margin:auto}
-.hero-copy{padding:68px 50px 30px;min-height:700px}
-.hero h1,.section-title{font-family:var(--font-heading);font-weight:800;letter-spacing:-1.8px;margin:0;color:var(--navy)}
-.hero h1{font-size:46px;line-height:1.08;max-width:600px}
-.hero-description{font-size:18px;line-height:1.35;max-width:650px;margin:66px 0 88px}
-.buttons{display:flex;gap:16px;margin-bottom:20px}.btn{padding:17px 34px;border:2px solid var(--navy);font-size:16px;display:inline-block}.btn.gold{background:var(--gold);color:#fff;border-color:var(--gold)}
-.hero-logo{width:390px;max-width:80%;height:auto;object-fit:contain;margin:5px 0 55px 90px}.industries{font-size:13px;letter-spacing:.8px}.industries .label{display:inline-block;border-bottom:2px solid var(--navy);padding-bottom:9px;margin-bottom:8px}
-.hero-media{height:700px;overflow:hidden}.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero{
+  display:grid;
+  grid-template-columns:1.1fr .78fr;
+  align-items:stretch;
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+}
+
+.hero-copy{
+  grid-column:1;
+  grid-row:1;
+  padding:68px 50px 30px;
+  min-height:700px;
+}
+
+.hero h1,
+.section-title{
+  font-family:var(--font-heading);
+  font-weight:800;
+  letter-spacing:-1.8px;
+  margin:0;
+  color:var(--navy);
+}
+
+.hero h1{
+  font-size:46px;
+  line-height:1.08;
+  max-width:600px;
+}
+
+.hero-description{
+  font-size:18px;
+  line-height:1.35;
+  max-width:650px;
+  margin:66px 0 88px;
+}
+
+.buttons{
+  display:flex;
+  gap:16px;
+  margin-bottom:20px;
+}
+
+.btn{
+  padding:17px 34px;
+  border:2px solid var(--navy);
+  font-size:16px;
+  display:inline-block;
+}
+
+.btn.gold{
+  background:var(--gold);
+  color:#fff;
+  border-color:var(--gold);
+}
+
+.hero-logo{
+  width:390px;
+  max-width:80%;
+  height:auto;
+  object-fit:contain;
+  margin:5px 0 55px 90px;
+}
+
+.industries{
+  font-size:13px;
+  letter-spacing:.8px;
+}
+
+.industries .label{
+  display:inline-block;
+  border-bottom:2px solid var(--navy);
+  padding-bottom:9px;
+  margin-bottom:8px;
+}
+
+.hero-media{
+  grid-column:2;
+  grid-row:1;
+  height:700px;
+  overflow:hidden;
+}
+
+.hero-media img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 .advantage{max-width:var(--max);margin:auto;padding:72px 50px 90px}.advantage .section-title{font-size:56px;line-height:1.02;max-width:620px;margin-bottom:66px}
 .three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:80px}.card-title{font-size:26px;line-height:1.08;font-weight:800;margin:0 0 70px}.card-text{font-size:16px;line-height:1.38;margin:0}
 .services{border-top:1px solid #cbd1d8;padding:58px 0 80px}.services-inner{max-width:var(--max);margin:auto;padding:0 50px}.services h2{font-size:52px;line-height:1.03;margin:0 0 28px;max-width:900px}.services-intro{font-size:18px;line-height:1.4;max-width:780px;margin:0 0 65px}
